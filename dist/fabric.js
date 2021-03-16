@@ -943,6 +943,7 @@
       * @param {Array} da dash array pattern
       */
      drawDashedLine: function(ctx, x, y, x2, y2, da) {
+       console.log(ctx, x, y, x2, y2, da);
        var dx = x2 - x,
            dy = y2 - y,
            len = sqrt(dx * dx + dy * dy),
@@ -12827,7 +12828,7 @@
              input:                    this.input,
              output:                   this.output,
              _id:                      this._id,
-             sentidoCorrente:          this.sentidoCorrente,
+             tutorialVideo:            this.tutorialVideo,
              type:                     this.type,
              originX:                  this.originX,
              originY:                  this.originY,
