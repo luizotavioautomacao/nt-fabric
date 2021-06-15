@@ -348,6 +348,78 @@
        return o.type === type;
      });
    },
+
+   getObjectsByTipo: function(tipo) {
+    if (typeof tipo === 'undefined') {
+      return this._objects;
+    }
+    return this._objects.filter(function(o) {
+      return o.tipo === tipo;
+    });
+  },
+
+  getObjectsById: function(id) {
+    if (typeof id === 'undefined') {
+      return this._objects;
+    }
+    return this._objects.filter(function(o) {
+      return o.id === id;
+    });
+  },
+
+  getObjectsByNome: function(nome) {
+    if (typeof nome === 'undefined') {
+      return this._objects;
+    }
+    return this._objects.filter(function(o) {
+      return o.nome === nome;
+    });
+  },
+
+  getObjectsByIdAndTipo: function(id, tipo) {
+    if (typeof id === 'undefined' && typeof tipo === 'undefined') {
+      return this._objects;
+    }
+    return this._objects.filter(function(o) {
+      return o.id === id && o.tipo === tipo;
+    });
+  },
+
+  getObjectsByIdAndTipoAndModuloECU: function(id, tipo, moduloECU) {
+    if (typeof id === 'undefined' && typeof tipo === 'undefined' && typeof moduloECU === 'undefined') {
+      return this._objects;
+    }
+    return this._objects.filter(function(o) {
+      return o.id === id && o.tipo === tipo && o.moduloEcu === moduloECU;
+    });
+  },
+
+  getObjectsByPino: function(pino) {
+    if (typeof pino === 'undefined') {
+      return this._objects;
+    }
+    return this._objects.filter(function(o) {
+      return o.pino === pino;
+    });
+  },
+
+  getObjectsByComponenteIdAndTipo: function(componenteId, tipo) {
+    if (typeof componenteId === 'undefined' && typeof tipo === 'undefined') {
+      return this._objects;
+    }
+    return this._objects.filter(function(o) {
+      return o.componenteId === componenteId && o.tipo === tipo;
+    });
+  },
+
+  getObjectsByComponenteId: function(componenteId) {
+    if (typeof componenteId === 'undefined') {
+      return this._objects;
+    }
+    return this._objects.filter(function(o) {
+      return o.componenteId === componenteId;
+    });
+  },
  
    /**
     * Returns object at specified index
