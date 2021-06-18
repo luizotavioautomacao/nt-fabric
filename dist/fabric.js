@@ -358,12 +358,48 @@
     });
   },
 
+  getObjectsByType: function(type) {
+    if (typeof type === 'undefined') {
+      return this._objects;
+    }
+    return this._objects.filter(function(o) {
+      return o.type === type;
+    });
+  },
+
+  getObjectsByTipoDif: function(tipo) {
+    if (typeof tipo === 'undefined') {
+      return this._objects;
+    }
+    return this._objects.filter(function(o) {
+      return o.tipo !== tipo;
+    });
+  },
+
   getObjectsById: function(id) {
     if (typeof id === 'undefined') {
       return this._objects;
     }
     return this._objects.filter(function(o) {
       return o.id === id;
+    });
+  },
+
+  getObjectsBy_Id: function(_id) {
+    if (typeof _id === 'undefined') {
+      return this._objects;
+    }
+    return this._objects.filter(function(o) {
+      return o._id === _id;
+    });
+  },
+
+  getObjectsByIdAndNome: function(id, nome) {
+    if (typeof id === 'undefined' && typeof nome === 'undefined') {
+      return this._objects;
+    }
+    return this._objects.filter(function(o) {
+      return o.id === id && o.nome === nome;
     });
   },
 
@@ -385,12 +421,39 @@
     });
   },
 
+  getObjectsByIdAndTipoAndNome: function(id, tipo, nome) {
+    if (typeof id === 'undefined' && typeof tipo === 'undefined' && typeof nome === 'undefined') {
+      return this._objects;
+    }
+    return this._objects.filter(function(o) {
+      return o.id === id && o.tipo === tipo && o.nome === nome;
+    });
+  },
+
+  getObjectsByIdAndTipoAndNomeDif: function(id, tipo, nome) {
+    if (typeof id === 'undefined' && typeof tipo === 'undefined' && typeof nome === 'undefined') {
+      return this._objects;
+    }
+    return this._objects.filter(function(o) {
+      return o.id === id && o.tipo === tipo && o.nome !== nome;
+    });
+  },
+
   getObjectsByIdAndTipoAndModuloECU: function(id, tipo, moduloECU) {
     if (typeof id === 'undefined' && typeof tipo === 'undefined' && typeof moduloECU === 'undefined') {
       return this._objects;
     }
     return this._objects.filter(function(o) {
       return o.id === id && o.tipo === tipo && o.moduloEcu === moduloECU;
+    });
+  },
+
+  getObjectsByTipoAndPino: function(tipo, pino) {
+    if (typeof pino === 'undefined' && typeof tipo === 'undfined') {
+      return this._objects;
+    }
+    return this._objects.filter(function(o) {
+      return o.tipo === tipo && o.pino === pino;
     });
   },
 
