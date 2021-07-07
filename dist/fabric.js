@@ -475,6 +475,15 @@
     });
   },
 
+  getObjectsByComponenteIdAndTipoAndText: function(componenteId, tipo) {
+    if (typeof componenteId === 'undefined' && typeof tipo === 'undefined') {
+      return this._objects;
+    }
+    return this._objects.filter(function(o) {
+      return o.componenteId === componenteId && o.tipo === tipo && o.text !== '';
+    });
+  },
+
   getObjectsByComponenteId: function(componenteId) {
     if (typeof componenteId === 'undefined') {
       return this._objects;
