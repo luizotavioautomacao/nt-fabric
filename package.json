@@ -1,7 +1,7 @@
  {
   "name": "nt-f4bric",
   "description": "Object model for HTML5 canvas, and SVG-to-canvas parser. Backed by jsdom and node-canvas.",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "author": "Luiz Otavio Mendes de Oliveira <luizotavioautomacao@gmail.com>",
   "contributors": [
     {
