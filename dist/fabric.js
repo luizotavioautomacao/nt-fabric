@@ -375,12 +375,30 @@
     });
   },
 
+  getObjectsByTipoAndPino: function(tipo, pino) {
+    if (typeof pino === 'undefined' && typeof tipo === 'undfined') {
+      return this._objects;
+    }
+    return this._objects.filter(function(o) {
+      return o.tipo === tipo && o.pino === pino;
+    });
+  },
+
   getObjectsByNome: function(nome) {
     if (typeof nome === 'undefined') {
       return this._objects;
     }
     return this._objects.filter(function(o) {
       return o.nome === nome;
+    });
+  },
+
+  getObjectsByType: function(type) {
+    if (typeof type === 'undefined') {
+      return this._objects;
+    }
+    return this._objects.filter(function(o) {
+      return o.type === type;
     });
   },
 
