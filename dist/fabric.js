@@ -27051,8 +27051,8 @@
  
    var DOMParser = require('xmldom').DOMParser,
        URL = require('url'),
-       HTTP = require('http'),
-       HTTPS = require('https'),
+      //  HTTP = require('http'),
+      //  HTTPS = require('https'),
  
        Canvas = require('canvas'),
        Image = require('canvas').Image;
