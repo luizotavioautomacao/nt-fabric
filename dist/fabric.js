@@ -402,6 +402,15 @@
     });
   },
 
+  getObjectsBy_IdAndTipo: function(_id, tipo) {
+    if (typeof _id === 'undefined' && typeof tipo === 'undefined') {
+      return this._objects;
+    }
+    return this._objects.filter(function(o) {
+      return o._id === _id && o.tipo === tipo;
+    });
+  },
+
   getObjectsByIdAndTipo: function(id, tipo) {
     if (typeof id === 'undefined' && typeof tipo === 'undefined') {
       return this._objects;
