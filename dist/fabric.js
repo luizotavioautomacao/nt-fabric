@@ -411,6 +411,15 @@
     });
   },
 
+  getObjectsByIdAndNome: function(id, nome) {
+    if (typeof id === 'undefined' && typeof nome === 'undefined') {
+      return this._objects;
+    }
+    return this._objects.filter(function(o) {
+      return o.id === id && o.nome === nome;
+    });
+  },
+
   getObjectsByIdAndTipo: function(id, tipo) {
     if (typeof id === 'undefined' && typeof tipo === 'undefined') {
       return this._objects;
